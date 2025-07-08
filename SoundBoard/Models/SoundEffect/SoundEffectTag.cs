@@ -10,6 +10,6 @@ namespace SoundBoard.Models
         public int SoundEffectId { get; set; }
         public SoundEffect? SoundEffect { get; set; }
         public int TagId { get; set; }
-        public UserTags? Tag { get; set; }
+        public UserTag? Tag { get; set; }
     }
 }

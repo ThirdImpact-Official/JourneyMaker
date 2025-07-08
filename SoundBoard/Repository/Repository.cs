@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore;
 using SoundBoard.Repository.Interface;
-using System.Linq.Expressions;
 
 namespace SoundBoard.Repository
 {
-    public class Repository<T> : IRepository<T> where T : class
+    public class Repository<T> : IRepository<T>
+        where T : BaseEntity
     {
         private readonly DataContext _context;
 
@@ -17,14 +18,12 @@ namespace SoundBoard.Repository
         {
             try
             {
-
                 await _context.AddAsync(entity);
                 await _context.SaveChangesAsync();
                 return entity;
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -36,23 +35,21 @@ namespace SoundBoard.Repository
                 var entity = await _context.Set<T>().FindAsync(id);
                 if (entity != null)
                 {
-                    _context.Set<T>().Remove(entity);
+                    entity.IsDeleted = true;
+                    _context.Set<T>().Update(entity);
 
                     await _context.SaveChangesAsync();
                 }
-
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
 
         public async Task<IEnumerable<T>> GetAll()
         {
-            return await _context.Set<T>()
-                                 .ToListAsync();
+            return await _context.Set<T>().ToListAsync();
         }
 
         public async Task<IEnumerable<T>> GetAll(Expression<Func<T, bool>> predicate)
@@ -67,27 +64,26 @@ namespace SoundBoard.Repository
 
         public async Task<IEnumerable<T>> GetAllByPagination(int page, int pageSize)
         {
-
-            return await _context.Set<T>()
-                                 .Skip((page - 1) * pageSize)
-                                 .Take(pageSize).ToListAsync();
+            return await _context.Set<T>().Skip((page - 1) * pageSize).Take(pageSize).ToListAsync();
         }
 
-        public async Task<IEnumerable<T>> GetAllByPagination(int page, int pageSize, Expression<Func<T, bool>> predicate)
+        public async Task<IEnumerable<T>> GetAllByPagination(
+            int page,
+            int pageSize,
+            Expression<Func<T, bool>> predicate
+        )
         {
             IQueryable<T> query = _context.Set<T>();
             if (predicate != null)
             {
                 query = query.Where(predicate);
             }
-            return await query.Skip((page - 1) * pageSize)
-                               .Take(pageSize)
-                               .ToListAsync();
+            return await query.Skip((page - 1) * pageSize).Take(pageSize).ToListAsync();
         }
 
         public async Task<T> GetById(int id)
         {
-            return await _context.Set<T>().FindAsync(id);
+            return await _context.Set<T>().FindAsync(id) ?? null;
         }
 
         public async Task<T> GetById(int id, Expression<Func<T, bool>> predicate)
@@ -99,11 +95,10 @@ namespace SoundBoard.Repository
                 {
                     query = query.Where(predicate);
                 }
-                return await query.FirstOrDefaultAsync();
+                return await query.FirstOrDefaultAsync() ?? null;
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -118,10 +113,10 @@ namespace SoundBoard.Repository
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
+
         public async Task<int> CountAsync()
         {
             try
@@ -130,11 +125,10 @@ namespace SoundBoard.Repository
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
 
-        public IQueryable<T> GetQueryable()=>_context.Set<T>().AsNoTracking();
+        public IQueryable<T> GetQueryable() => _context.Set<T>().AsNoTracking();
     }
 }

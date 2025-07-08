@@ -10,6 +10,6 @@ namespace SoundBoard.Models
         public int MusicId { get; set; }
         public Music? Music { get; set; }
         public int TagId { get; set; }
-        public UserTags? UserTags { get; set; }
+        public UserTag? UserTag { get; set; }
     }
 }

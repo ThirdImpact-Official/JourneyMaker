@@ -14,6 +14,6 @@ namespace SoundBoard.Models
         public int? EndTime { get; set; }
         public int SoundEffectLibraryId { get; set; }
         public SoundEffectLibrary? SoundEffectLibrary { get; set; }
-        public ICollection<SoundEffectTag>? soundEffectTags { get; set; }
+        public ICollection<SoundEffectTag>? SoundEffectTags { get; set; }
     }
 }
