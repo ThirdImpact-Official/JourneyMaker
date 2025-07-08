@@ -134,5 +134,7 @@ namespace SoundBoard.Repository
                 throw;
             }
         }
+
+        public IQueryable<T> GetQueryable()=>_context.Set<T>().AsNoTracking();
     }
 }

@@ -4,6 +4,7 @@ namespace SoundBoard.Repository.Interface
 {
     public interface IRepository<T>
     {
+        IQueryable<T> GetQueryable();
         Task<T> GetById(int id);
         Task<T> GetById(int id, Expression<Func<T, bool>> predicate);
         Task<IEnumerable<T>> GetAll();
