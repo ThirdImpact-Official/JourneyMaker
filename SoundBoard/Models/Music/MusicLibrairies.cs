@@ -7,7 +7,7 @@ namespace SoundBoard.Models
 {
     /**
     * This class is a model for the music librairies
-    * this is the list of the music librairies of a user 
+    * this is the list of the music librairies of a user
     */
     public class MusicLibrairies : BaseEntity
     {
@@ -17,6 +17,7 @@ namespace SoundBoard.Models
         //appartient a un utilisateur
         public int UserId { get; set; }
         public User? User { get; set; } = null;
+
         //posséde une liste de musics
         public List<Music>? Musics { get; set; } = new List<Music>();
     }

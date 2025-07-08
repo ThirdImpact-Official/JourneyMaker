@@ -32,7 +32,7 @@ namespace SoundBoard.Repository
         {
             try
             {
-                var entity = await _context.Set<T>().FindAsync(id);
+                T? entity = await _context.Set<T>().FindAsync(id);
                 if (entity != null)
                 {
                     entity.IsDeleted = true;

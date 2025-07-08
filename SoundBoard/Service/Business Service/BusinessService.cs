@@ -24,56 +24,56 @@ namespace SoundBoard.Service
 
         public virtual async Task<ServiceResponse<List<TGetDto>>> GetAllAsync()
         {
-            var response = new ServiceResponse<List<TGetDto>>();
+            ServiceResponse<List<TGetDto>> response = new ServiceResponse<List<TGetDto>>();
             try
             {
                 var entities = await _repository.GetQueryable().ToListAsync();
                 response.Data = _mapper.Map<List<TGetDto>>(entities);
-                response.Message = "Éléments récupérés avec succès";
+                response.Message = "ï¿½lï¿½ments rï¿½cupï¿½rï¿½s avec succï¿½s";
             }
             catch (Exception ex)
             {
                 response.Success = false;
-                response.Message = $"Erreur lors de la récupération : {ex.Message}";
+                response.Message = $"Erreur lors de la rï¿½cupï¿½ration : {ex.Message}";
             }
             return response;
         }
 
         public virtual async Task<ServiceResponse<TGetDto>> GetByIdAsync(int id)
         {
-            var response = new ServiceResponse<TGetDto>();
+            ServiceResponse<TGetDto> response = new ServiceResponse<TGetDto>();
             try
             {
                 var entity = await _repository.GetByIdAsync(id);
                 if (entity == null)
                 {
                     response.Success = false;
-                    response.Message = "Élément non trouvé";
+                    response.Message = "ï¿½lï¿½ment non trouvï¿½";
                     return response;
                 }
 
                 response.Data = _mapper.Map<TGetDto>(entity);
-                response.Message = "Élément récupéré avec succès";
+                response.Message = "ï¿½lï¿½ment rï¿½cupï¿½rï¿½ avec succï¿½s";
             }
             catch (Exception ex)
             {
                 response.Success = false;
-                response.Message = $"Erreur lors de la récupération : {ex.Message}";
+                response.Message = $"Erreur lors de la rï¿½cupï¿½ration : {ex.Message}";
             }
             return response;
         }
 
         public virtual async Task<ServiceResponse<TGetDto>> AddAsync(TAddDto addDto)
         {
-            var response = new ServiceResponse<TGetDto>();
+            ServiceResponse<TGetDto> response = new ServiceResponse<TGetDto>();
             try
             {
-                var entity = _mapper.Map<TEntity>(addDto);
+                TEntity entity = _mapper.Map<TEntity>(addDto);
                 var addedEntity = await _repository.AddAsync(entity);
                 await _repository.SaveChangesAsync();
 
                 response.Data = _mapper.Map<TGetDto>(addedEntity);
-                response.Message = "Élément ajouté avec succès";
+                response.Message = "ï¿½lï¿½ment ajoutï¿½ avec succï¿½s";
             }
             catch (Exception ex)
             {
@@ -85,49 +85,49 @@ namespace SoundBoard.Service
 
         public virtual async Task<ServiceResponse<TGetDto>> UpdateAsync(int id, TUpdateDto updateDto)
         {
-            var response = new ServiceResponse<TGetDto>();
+            ServiceResponse<TGetDto> response = new ServiceResponse<TGetDto>();
             try
             {
                 var existingEntity = await _repository.GetByIdAsync(id);
                 if (existingEntity == null)
                 {
                     response.Success = false;
-                    response.Message = "Élément non trouvé";
+                    response.Message = "ï¿½lï¿½ment non trouvï¿½";
                     return response;
                 }
 
-                var entity = _mapper.Map<TEntity>(updateDto);
+                TEntity entity = _mapper.Map<TEntity>(updateDto);
                 entity.Id = id;
 
                 var updatedEntity = await _repository.UpdateAsync(entity);
                 await _repository.SaveChangesAsync();
 
                 response.Data = _mapper.Map<TGetDto>(updatedEntity);
-                response.Message = "Élément mis à jour avec succès";
+                response.Message = "ï¿½lï¿½ment mis ï¿½ jour avec succï¿½s";
             }
             catch (Exception ex)
             {
                 response.Success = false;
-                response.Message = $"Erreur lors de la mise à jour : {ex.Message}";
+                response.Message = $"Erreur lors de la mise ï¿½ jour : {ex.Message}";
             }
             return response;
         }
 
         public virtual async Task<ServiceResponse<bool>> DeleteAsync(int id)
         {
-            var response = new ServiceResponse<bool>();
+            ServiceResponse<bool> response = new ServiceResponse<bool>();
             try
             {
                 response.Data = await _repository.DeleteAsync(id);
                 if (!response.Data)
                 {
                     response.Success = false;
-                    response.Message = "Élément non trouvé";
+                    response.Message = "ï¿½lï¿½ment non trouvï¿½";
                     return response;
                 }
 
                 await _repository.SaveChangesAsync();
-                response.Message = "Élément supprimé avec succès";
+                response.Message = "ï¿½lï¿½ment supprimï¿½ avec succï¿½s";
             }
             catch (Exception ex)
             {
@@ -139,19 +139,19 @@ namespace SoundBoard.Service
 
         public virtual async Task<ServiceResponse<bool>> SoftDeleteAsync(int id)
         {
-            var response = new ServiceResponse<bool>();
+            ServiceResponse<bool> response = new ServiceResponse<bool>();
             try
             {
                 response.Data = await _repository.SoftDeleteAsync(id);
                 if (!response.Data)
                 {
                     response.Success = false;
-                    response.Message = "Élément non trouvé";
+                    response.Message = "ï¿½lï¿½ment non trouvï¿½";
                     return response;
                 }
 
                 await _repository.SaveChangesAsync();
-                response.Message = "Élément archivé avec succès";
+                response.Message = "ï¿½lï¿½ment archivï¿½ avec succï¿½s";
             }
             catch (Exception ex)
             {

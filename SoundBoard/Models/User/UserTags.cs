@@ -7,7 +7,7 @@ namespace SoundBoard.Models
 {
     /*
     * This class is a model for the user tags
-    * tags are used to define sound effect and music by the users 
+    * tags are used to define sound effect and music by the users
     * in order to identify them in his own way
     */
     public class UserTag : BaseEntity
