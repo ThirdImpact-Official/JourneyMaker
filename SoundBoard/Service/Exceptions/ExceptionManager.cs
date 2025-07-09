@@ -1,8 +1,9 @@
 ﻿using SoundBoard.Models;
 
-namespace SoundBoard.Service.Exception
+namespace SoundBoard.Service.Exceptions
 {
-    public static class ExceptionManager<T> where T : class
+    public static class ExceptionManager<T>
+        where T : class
     {
         public static ServiceResponse<T> DataError<T>(Errortype Errortype, string message)
         {
@@ -10,10 +11,9 @@ namespace SoundBoard.Service.Exception
             { 
                 Error = Errortype,
                 Message = message,
-                Sccesss = false, 
-                Data = default
+                Success = false,
+                Data = default ,
             };
-
         }
     }
 }

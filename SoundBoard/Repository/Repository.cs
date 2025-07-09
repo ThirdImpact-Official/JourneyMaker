@@ -83,7 +83,7 @@ namespace SoundBoard.Repository
 
         public async Task<T> GetById(int id)
         {
-            return await _context.Set<T>().FindAsync(id) ?? null;
+            return await _context.Set<T>().FindAsync(id) ?? throw new NullReferenceException();
         }
 
         public async Task<T> GetById(int id, Expression<Func<T, bool>> predicate)
@@ -95,7 +95,7 @@ namespace SoundBoard.Repository
                 {
                     query = query.Where(predicate);
                 }
-                return await query.FirstOrDefaultAsync() ?? null;
+                return await query.FirstOrDefaultAsync() ?? throw new NullReferenceException();
             }
             catch (Exception)
             {

@@ -13,7 +13,7 @@ namespace SoundBoard.Repository.Interface
         Task<IEnumerable<T>> GetAllByPagination(int page, int pageSize, Expression<Func<T, bool>> predicate);
         Task<T> AddEntity(T entity);
         Task<T> UpdateEntity(T entity);
-        Task DeleteEntity(int id);
+        Task<bool> DeleteEntity(int id);
         Task<int> CountAsync();
     }
 }
