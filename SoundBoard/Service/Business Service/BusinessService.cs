@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using AutoMapper;
+using Azure;
 using Microsoft.EntityFrameworkCore;
 using SoundBoard.Repository.Interface;
 
@@ -72,8 +74,8 @@ namespace SoundBoard.Service
             {
                 TEntity entity = _mapper.Map<TEntity>(addDto);
 
-                entity.CreationDate= DateTime.Now;
-                entity.UpdatedDate= DateTime.Now;
+                entity.CreationDate = DateTime.Now;
+                entity.UpdatedDate = DateTime.Now;
 
                 var addedEntity = await _repository.AddEntity(entity);
 
@@ -134,6 +136,59 @@ namespace SoundBoard.Service
                 }
 
                 response.Message = "�l�ment supprim� avec succ�s";
+            }
+            catch (Exception ex)
+            {
+                response.Success = false;
+                response.Message = $"Erreur lors de la suppression : {ex.Message}";
+            }
+            return response;
+        }
+
+        /// <summary>
+        /// Get all Entities by page
+        /// </summary>
+        /// <param name="pageNumber"></param>
+        /// <param name="pageSize"></param>
+        /// <param name="predicate"></param>
+        /// <returns></returns>
+        public async Task<Pagination<TGetDto>> GetPageAsync(
+            int pageNumber,
+            int pageSize,
+            Expression<Func<TEntity, bool>>? predicate = null
+        )
+        {
+            Pagination<TGetDto> response = new Pagination<TGetDto>();
+            try
+            {
+                //verification
+                pageNumber = Math.Max(1, pageNumber);
+                pageSize = Math.Max(1, pageSize);
+
+                //my query
+                IQueryable<TEntity> query = _repository.GetQueryable();
+                if (predicate != null)
+                {
+                    query = query.Where(predicate);
+                }
+
+                //pageCount
+                int pageCount = await query.CountAsync();
+
+                int totalPage = (int)Math.Ceiling((double)pageCount / pageSize);
+
+                List<TEntity> getEnttities = await query
+                    .Skip((pageNumber - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToListAsync();
+
+                //operation
+                response.Data = _mapper.Map<List<TGetDto>>(getEnttities);
+                response.Message = "�l�ments r�cup�r�s avec succ�s";
+                response.Success = true;
+                response.PageNumber = pageNumber;
+                response.PageSize = pageSize;
+                response.TotalPage = totalPage;
             }
             catch (Exception ex)
             {
