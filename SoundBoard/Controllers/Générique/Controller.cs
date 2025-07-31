@@ -34,16 +34,12 @@ namespace SoundBoard.Controllers
                     pageSize,
                     null
                 );
-                
-                if (!response.Success)
-                {
-                    return BadRequest(response);
-                }
-                return Ok(response);
+
+                return HttpManager.HandleRequest(response as Pagination<TGetDto>);
             }
-            catch (System.Exception)
+            catch (System.Exception exception)
             {
-                throw;
+                return await HttpManager.BadPageError<TGetDto>(exception);
             }
         }
 
@@ -64,9 +60,9 @@ namespace SoundBoard.Controllers
                 }
                 return Ok(response);
             }
-            catch (System.Exception)
+            catch (System.Exception exception)
             {
-                throw;
+                return await HttpManager.BadError<TGetDto>(exception);
             }
         }
 
@@ -75,21 +71,19 @@ namespace SoundBoard.Controllers
         /// </summary>
         /// <param name="Entity"></param>
         /// <returns></returns>
-        [HttpPost("Create")]
-        public async Task<ActionResult> AddEntity([FromBody] TAddDto Entity)
+        [HttpPost("create")]
+        public async Task<ActionResult<ServiceResponse<TGetDto>>> AddEntity(
+            [FromBody] TAddDto Entity
+        )
         {
             try
             {
                 ServiceResponse<TGetDto> response = await _bService.AddAsync(Entity);
-                if (!response.Success)
-                {
-                    return BadRequest(response);
-                }
-                return NoContent();
+                return HttpManager.HandleRequest(response);
             }
-            catch (System.Exception)
+            catch (System.Exception exception)
             {
-                throw;
+                return await HttpManager.BadError<TGetDto>(exception);
             }
         }
 
@@ -99,20 +93,19 @@ namespace SoundBoard.Controllers
         /// <param name="Entity"></param>
         /// <returns></returns>
         [HttpPut("update/{id}")]
-        public async Task<ActionResult> UpdateEntity(int id, [FromBody] TUpdateDto Entity)
+        public async Task<ActionResult<ServiceResponse<TGetDto>>> UpdateEntity(
+            int id,
+            [FromBody] TUpdateDto Entity
+        )
         {
             try
             {
                 ServiceResponse<TGetDto> response = await _bService.UpdateAsync(id, Entity);
-                if (!response.Success)
-                {
-                    return BadRequest(response);
-                }
-                return Ok(response);
+                return HttpManager.HandleRequest(response);
             }
-            catch (System.Exception)
+            catch (System.Exception exception)
             {
-                throw;
+                return await HttpManager.BadError<TGetDto>(exception);
             }
         }
 
@@ -126,12 +119,12 @@ namespace SoundBoard.Controllers
         {
             try
             {
-                ServiceResponse<bool> response = await _bService.DeleteAsync(Id);
-                return Ok(response);
+                ServiceResponse<TGetDto> response = await _bService.DeleteAsync(Id);
+                return HttpManager.HandleRequest(response);
             }
-            catch (System.Exception)
+            catch (System.Exception exception)
             {
-                throw;
+                return await HttpManager.BadError<TGetDto>(exception);
             }
         }
     }

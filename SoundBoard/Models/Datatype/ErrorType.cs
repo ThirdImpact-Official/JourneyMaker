@@ -1,8 +1,9 @@
 namespace SoundBoard.Models;
-public enum Errortype 
+
+public enum Errortype
 {
     Good,
     Bad,
     Null,
-    Other  
+    Other,
 }

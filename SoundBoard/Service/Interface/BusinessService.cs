@@ -21,6 +21,6 @@ namespace SoundBoard.Service.Interface
         Task<ServiceResponse<TGetDto>> GetByIdAsync(int id);
         Task<ServiceResponse<TGetDto>> AddAsync(TAddDto addDto);
         Task<ServiceResponse<TGetDto>> UpdateAsync(int id, TUpdateDto updateDto);
-        Task<ServiceResponse<bool>> DeleteAsync(int id);
+        Task<ServiceResponse<TGetDto>> DeleteAsync(int id);
     }
 }
