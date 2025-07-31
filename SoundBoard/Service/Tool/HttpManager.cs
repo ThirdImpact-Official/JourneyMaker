@@ -30,15 +30,12 @@ namespace SoundBoard.Service.Tool
             {
                 return Task.FromResult<ActionResult<ServiceResponse<T>>>(
                     new BadRequestObjectResult(
-                        new ServiceResponse<T>
-                        {
-                            Success = false,
-                            Message = "Bad request"
-                        }
+                        new ServiceResponse<T> { Success = false, Message = "Bad request" }
                     )
                 );
             }
         }
+
         /// <summary>
         /// return a bad error For the controller in order to propluy handle the error
         /// </summary>
