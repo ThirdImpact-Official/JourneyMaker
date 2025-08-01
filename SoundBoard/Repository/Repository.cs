@@ -27,19 +27,21 @@ namespace SoundBoard.Repository
                 throw;
             }
         }
-
-        public async Task DeleteEntity(int id)
+        
+        public async Task<T> DeleteEntity(int id)
         {
             try
             {
                 T? entity = await _context.Set<T>().FindAsync(id);
-                if (entity != null)
+                if (entity == null)
                 {
-                    entity.IsDeleted = true;
-                    _context.Set<T>().Update(entity);
-
-                    await _context.SaveChangesAsync();
+                    throw new Exception("Entity not found inside the database");
                 }
+                entity.IsDeleted = true;
+                _context.Set<T>().Update(entity);
+
+                await _context.SaveChangesAsync();
+                return entity;
             }
             catch (Exception)
             {

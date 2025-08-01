@@ -19,10 +19,17 @@ namespace SoundBoard.Service
     {
         protected readonly IRepository<TEntity> _repository;
         protected readonly IMapper _mapper;
+        private IUnitOfWork unitOfWork;
 
         protected BusinessService(IRepository<TEntity> repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
+        }
+
+        public BusinessService(IUnitOfWork unitOfWork, IMapper mapper)
+        {
+            this.unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
@@ -122,13 +129,13 @@ namespace SoundBoard.Service
             return response;
         }
 
-        public virtual async Task<ServiceResponse<bool>> DeleteAsync(int id)
+        public virtual async Task<ServiceResponse<TGetDto>> DeleteAsync(int id)
         {
-            ServiceResponse<bool> response = new ServiceResponse<bool>();
+            ServiceResponse<TGetDto> response = new ServiceResponse<TGetDto>();
             try
             {
-                response.Data = await _repository.DeleteEntity(id);
-                if (!response.Data)
+                response.Data = _mapper.Map<TGetDto>(await _repository.DeleteEntity(id));
+                if (response.Data is null)
                 {
                     response.Success = false;
                     response.Message = "�l�ment non trouv�";

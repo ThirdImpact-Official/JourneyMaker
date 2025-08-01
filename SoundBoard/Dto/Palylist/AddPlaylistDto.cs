@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SoundBoard.Dto
+namespace SoundBoard.Dto.Palylist
 {
-    public class TAddDto
+    public class AddPlaylistDto : TAddDto
     {
         
     }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SoundBoard.Dto
+namespace SoundBoard.Dto.SoundFile
 {
-    public class TAddDto
+    public class AddSoundFileDto : TAddDto
     {
         
     }
