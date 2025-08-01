@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Runtime.CompilerServices;
+using Microsoft.EntityFrameworkCore;
 using SoundBoard.Repository;
 using SoundBoard.Repository.Cycle;
 using SoundBoard.Repository.Favorite;
@@ -44,6 +45,15 @@ namespace SoundBoard.Extension_Methodes
             services.AddScoped<IFavoriteSoundEffectRepository, FavoriteSoundEffectRepository>();
             //UnitOfWork
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            return services;
+        }
+        #endregion
+        #region Services
+        public static IServiceCollection AddServices(this IServiceCollection services)
+        {
+            services.AddScoped<ISoundFileService, SoundFileService>();
+            services.AddScoped<IPlaylistService, PlaylistService>();
+            services.AddScoped<IMusicCycleService, MusicCycleService>();
             return services;
         }
         #endregion
