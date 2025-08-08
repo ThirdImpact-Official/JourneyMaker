@@ -1,23 +1,30 @@
+version: "3.8"
 services:
 
-  cache: 
+  cache:
     container_name: cache
     image: eqalpha/keydb
     # command: keydb-server /etc/keydb/redis.conf --server-threads 2 --active-replica yes --replicaof 192.168.1.1 6379
     # command: keydb-server /etc/keydb/redis.conf --server-threads 2 --active-replica yes --replicaof 192.168.1.2 6379
     command: keydb-server /etc/keydb/redis.conf --server-threads 2
-    port:
+    ports:
       - 6379:6379
     volumes:
       - ./redis.conf:/etc/keydb/redis.conf
       - data:/data
     restart: unless-stopped
-
   sql-server: 
     container_name: sql-server
     image: mcr.microsoft.com/mssql/server:2022-latest
-    port: 
-      - 5433:1433 
+    ports: 
+      - 5433:1433
+    volumes:
+      - sqldata:/var/opt/mssql
     environment:
       - ACCEPT_EULA=Y
       - MSSQL_SA_PASSWORD=Novation96
+volumes:
+  data:
+    driver: local
+  sqldata:
+    driver: local
