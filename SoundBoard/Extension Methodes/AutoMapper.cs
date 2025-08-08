@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using SoundBoard.Dto.MusicCycles;
+using SoundBoard.Dto.MusicItem;
+using SoundBoard.Models;
 
 namespace SoundBoard.Extension_Methodes
 {
@@ -10,17 +13,20 @@ namespace SoundBoard.Extension_Methodes
     {
         public AutoMapper()
         {
+            // the music items
             MapperGeneric<
                 MusicCycleItem,
-                MusicCycleItemDto,
-                MusicCycleItemDto,
-                MusicCycleItemDto
+                GetMusicCycleItemDto,
+                AddMusicCyclesItemDto,
+                UpdateMusicCycleItemDto
             >();
+
+            // the music cycles
             MapperGeneric<
-                MusicCycleItem,
-                MusicCycleItemDto,
-                MusicCycleItemDto,
-                MusicCycleItemDto
+                MusicCycles,
+                GetMusicCycleDto,
+                AddMusicCyclesDto,
+                UpdateMusicCyclesDto
             >();
         }
 

@@ -4,6 +4,7 @@ using SoundBoard.Repository;
 using SoundBoard.Repository.Cycle;
 using SoundBoard.Repository.Favorite;
 using SoundBoard.Repository.Interface;
+using SoundBoard.Service.Business_Service;
 
 namespace SoundBoard.Extension_Methodes
 {
@@ -49,11 +50,18 @@ namespace SoundBoard.Extension_Methodes
         }
         #endregion
         #region Services
+        /// <summary>
+        /// add services to the dependency injection
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
             services.AddScoped<ISoundFileService, SoundFileService>();
             services.AddScoped<IPlaylistService, PlaylistService>();
             services.AddScoped<IMusicCycleService, MusicCycleService>();
+            services.AddScoped<IUserTagService, UserTagService>();
+            services.AddScoped<IMusicTagService, MusicTagService>();
             return services;
         }
         #endregion

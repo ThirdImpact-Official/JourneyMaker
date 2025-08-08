@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SoundBoard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c482617eb5e066b3e6c6dadff88ecbdfd575431c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95a69a9d8035fec8ba9ba3e31e0264fb488557fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("SoundBoard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SoundBoard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

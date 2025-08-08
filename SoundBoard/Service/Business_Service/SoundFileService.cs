@@ -20,5 +20,10 @@ namespace SoundBoard.Service.Business_Service
             this.unitOfWork = unitOfWork;
             this.mapper = mapper;
         }
+
+        protected override IRepository<SoundEffect> GetRepository()
+        {
+            return this.unitOfWork.GetRepository<SoundEffect>();
+        }
     }
 }

@@ -9,10 +9,12 @@ using SoundBoard.Models;
 namespace SoundBoard.Service.Business_Service
 {
     public class MusicCycleService
-        : BusinessService<MusicCycles, GetMusicCycleDto, AddMusicCyclesDto, UpdateMusicCyclesDto>, IMusicCycleService
+        : BusinessService<MusicCycles, GetMusicCycleDto, AddMusicCyclesDto, UpdateMusicCyclesDto>,
+            IMusicCycleService
     {
         private readonly IUnitOfWork unitOfWork;
         private readonly IMapper mapper;
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -22,6 +24,11 @@ namespace SoundBoard.Service.Business_Service
         {
             this.unitOfWork = unitOfWork;
             this.mapper = mapper;
+        }
+
+        protected  override IRepository<MusicCycles> GetRepository()
+        {
+            return unitOfWork.GetRepository<MusicCycles>();
         }
     }
 }

@@ -10,35 +10,33 @@ using SoundBoard.Repository.Interface;
 
 namespace SoundBoard.Service
 {
-    public class BusinessService<TEntity, TGetDto, TAddDto, TUpdateDto>
+    public abstract class BusinessService<TEntity, TGetDto, TAddDto, TUpdateDto>
         : IBusinessService<TEntity, TGetDto, TAddDto, TUpdateDto>
         where TEntity : BaseEntity
         where TGetDto : class
         where TAddDto : class
         where TUpdateDto : class
     {
-        protected readonly IRepository<TEntity> _repository;
         protected readonly IMapper _mapper;
         private IUnitOfWork unitOfWork;
-
-        protected BusinessService(IRepository<TEntity> repository, IMapper mapper)
-        {
-            _repository = repository;
-            _mapper = mapper;
-        }
 
         public BusinessService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             this.unitOfWork = unitOfWork;
             _mapper = mapper;
         }
+        /// <summary>
+        /// Get Repository
+        /// </summary>
+        /// <returns></returns>
+        protected abstract IRepository<TEntity> GetRepository();
 
         public virtual async Task<ServiceResponse<List<TGetDto>>> GetAllAsync()
         {
             ServiceResponse<List<TGetDto>> response = new ServiceResponse<List<TGetDto>>();
             try
             {
-                var entities = await _repository.GetQueryable().ToListAsync();
+                var entities = await GetRepository().GetQueryable().ToListAsync();
                 response.Data = _mapper.Map<List<TGetDto>>(entities);
                 response.Message = "�l�ments r�cup�r�s avec succ�s";
             }
@@ -55,7 +53,7 @@ namespace SoundBoard.Service
             ServiceResponse<TGetDto> response = new ServiceResponse<TGetDto>();
             try
             {
-                var entity = await _repository.GetById(id);
+                var entity = await GetRepository().GetById(id);
                 if (entity == null)
                 {
                     response.Success = false;
@@ -84,7 +82,7 @@ namespace SoundBoard.Service
                 entity.CreationDate = DateTime.Now;
                 entity.UpdatedDate = DateTime.Now;
 
-                var addedEntity = await _repository.AddEntity(entity);
+                var addedEntity = await GetRepository().AddEntity(entity);
 
                 response.Data = _mapper.Map<TGetDto>(addedEntity);
 
@@ -106,7 +104,7 @@ namespace SoundBoard.Service
             ServiceResponse<TGetDto> response = new ServiceResponse<TGetDto>();
             try
             {
-                var existingEntity = await _repository.GetById(id);
+                var existingEntity = await GetRepository().GetById(id);
                 if (existingEntity == null)
                 {
                     response.Success = false;
@@ -116,7 +114,7 @@ namespace SoundBoard.Service
 
                 TEntity entity = _mapper.Map<TEntity>(updateDto);
                 entity.UpdatedDate = DateTime.Now;
-                var updatedEntity = await _repository.UpdateEntity(entity);
+                var updatedEntity = await GetRepository().UpdateEntity(entity);
 
                 response.Data = _mapper.Map<TGetDto>(updatedEntity);
                 response.Message = "�l�ment mis � jour avec succ�s";
@@ -134,7 +132,7 @@ namespace SoundBoard.Service
             ServiceResponse<TGetDto> response = new ServiceResponse<TGetDto>();
             try
             {
-                response.Data = _mapper.Map<TGetDto>(await _repository.DeleteEntity(id));
+                response.Data = _mapper.Map<TGetDto>(await GetRepository().DeleteEntity(id));
                 if (response.Data is null)
                 {
                     response.Success = false;
@@ -173,7 +171,7 @@ namespace SoundBoard.Service
                 pageSize = Math.Max(1, pageSize);
 
                 //my query
-                IQueryable<TEntity> query = _repository.GetQueryable();
+                IQueryable<TEntity> query = GetRepository().GetQueryable();
                 if (predicate != null)
                 {
                     query = query.Where(predicate);
