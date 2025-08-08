@@ -32,6 +32,8 @@ public class DataContext : IdentityDbContext<User>
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
+        // User tags 
         _ = modelBuilder.Entity<UserTag>().HasKey(x => x.Id);
 
         _ = modelBuilder
@@ -40,7 +42,9 @@ public class DataContext : IdentityDbContext<User>
             .WithMany(x => x.UserTags)
             .HasForeignKey(x => x.UserId)
             .OnDelete(DeleteBehavior.Restrict);
+        
 
+        // Music
         _ = modelBuilder.Entity<MusicTag>().HasKey(x => new { x.MusicId, x.TagId });
 
         _ = modelBuilder
@@ -56,9 +60,10 @@ public class DataContext : IdentityDbContext<User>
             .WithMany(sd => sd.MusicTags)
             .HasForeignKey(sd => sd.TagId)
             .OnDelete(DeleteBehavior.Restrict);
-
+        // Music
         _ = modelBuilder.Entity<Music>().HasKey(x => x.Id);
 
+        // Music Librairies
         _ = modelBuilder.Entity<MusicLibrairies>().HasKey(x => x.Id);
 
         _ = modelBuilder
@@ -67,6 +72,7 @@ public class DataContext : IdentityDbContext<User>
             .WithMany(x => x.Musics)
             .HasForeignKey(x => x.MusicLibrairiesId)
             .OnDelete(DeleteBehavior.Restrict);
+        // Music Cycles
 
         _ = modelBuilder.Entity<MusicCycles>().HasKey(x => x.Id);
 
@@ -123,7 +129,8 @@ public class DataContext : IdentityDbContext<User>
             .WithMany(x => x.SoundEffects)
             .HasForeignKey(x => x.SoundEffectLibraryId)
             .OnDelete(DeleteBehavior.Restrict);
-
+        
+        // SoundEffect tag
         _ = modelBuilder.Entity<SoundEffectTag>().HasKey(x => new { x.SoundEffectId, x.TagId });
 
         _ = modelBuilder
@@ -132,9 +139,10 @@ public class DataContext : IdentityDbContext<User>
             .WithMany(x => x.SoundEffectTags)
             .HasForeignKey(x => x.SoundEffectId)
             .OnDelete(DeleteBehavior.Restrict);
-
+        
+        // keyboard Binding
         _ = modelBuilder.Entity<KeyBoardMapping>().HasKey(x => x.Id);
-
+        
         _ = modelBuilder
             .Entity<KeyBoardMapping>()
             .HasOne(sd => sd.User)
@@ -142,7 +150,10 @@ public class DataContext : IdentityDbContext<User>
             .HasForeignKey(sd => sd.UserId)
             .OnDelete(DeleteBehavior.Cascade);
 
+        // Midi mapping
+        
         _ = modelBuilder.Entity<MidiMapping>().HasKey(x => x.Id);
+        
 
         _ = modelBuilder
             .Entity<MidiMapping>()
@@ -153,18 +164,22 @@ public class DataContext : IdentityDbContext<User>
 
         _ = modelBuilder.Entity<FavoriteMusic>().HasKey(x => new { x.MusicId, x.UserId });
 
+        // Favoris Music
         _ = modelBuilder
             .Entity<FavoriteSoundEffect>()
             .HasKey(x => new { x.SoundEffectId, x.UserId });
-
+        
+        // Favoris SoundEffect
         _ = modelBuilder
             .Entity<FavoriteMusic>()
             .HasOne(sd => sd.Music)
             .WithMany()
             .HasForeignKey(sd => sd.MusicId)
             .OnDelete(DeleteBehavior.Restrict);
+
         _ = modelBuilder.Entity<SessionGame>().HasKey(x => x.Id);
 
+        // Session Game 
         _ = modelBuilder
             .Entity<SessionGame>()
             .HasOne(sd => sd.User)
