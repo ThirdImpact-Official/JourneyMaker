@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SoundBoard.Extension Methodes
+namespace SoundBoard.Extension_Methodes
 {
     public static class CacheDependencyInjection
     {
@@ -12,8 +12,8 @@ namespace SoundBoard.Extension Methodes
             service.AddStackExchangeRedisCache(opt => {
                 opt.Configuration= configuration.GetConnectionString("keydb");
             });
-            
-            return service
+
+            return service;
         }
     }
 }

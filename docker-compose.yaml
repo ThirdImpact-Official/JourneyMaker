@@ -1,6 +1,5 @@
 version: "3.8"
 services:
-
   cache:
     container_name: cache
     image: eqalpha/keydb
@@ -13,11 +12,11 @@ services:
       - ./redis.conf:/etc/keydb/redis.conf
       - data:/data
     restart: unless-stopped
-  sql-server: 
-    container_name: sql-server
+  sql-serverdb: 
+    container_name: sql-serverdb
     image: mcr.microsoft.com/mssql/server:2022-latest
     ports: 
-      - 5433:1433
+      - 2433:1433
     volumes:
       - sqldata:/var/opt/mssql
     environment:
