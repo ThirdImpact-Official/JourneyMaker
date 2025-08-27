@@ -13,10 +13,13 @@ namespace SoundBoard.Controllers
     {
         private IBusinessService<TEntity, TGetDto, TAddDto, TUpdateDto> _bService;
 
+
         public GenericController(IBusinessService<TEntity, TGetDto, TAddDto, TUpdateDto> bServerice)
         {
             _bService = bServerice;
         }
+
+
 
         /// <summary>
         /// Get all Entities

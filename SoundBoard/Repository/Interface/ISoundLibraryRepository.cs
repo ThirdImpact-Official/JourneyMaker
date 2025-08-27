@@ -2,7 +2,8 @@
 
 namespace SoundBoard.Repository.Interface
 {
-    public interface ISoundLibraryRepository : IRepository<SoundLibrary>
+    public interface ISoundLibraryRepository : IRepository<Models.SoundEffectLibrary>
     {
+        
     }
 }

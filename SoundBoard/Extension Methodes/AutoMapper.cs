@@ -9,9 +9,9 @@ using SoundBoard.Models;
 
 namespace SoundBoard.Extension_Methodes
 {
-    public class AutoMapper : Profile
+    public class AutoMapperProfile : Profile
     {
-        public AutoMapper()
+        public AutoMapperProfile()
         {
             // the music items
             MapperGeneric<

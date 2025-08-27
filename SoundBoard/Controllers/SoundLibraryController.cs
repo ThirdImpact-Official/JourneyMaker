@@ -1,16 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SoundBoard.Dto.SoundFile;
 using SoundBoard.Repository.Interface;
 
 namespace SoundBoard.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SoundLibraryController : GenericController<SoundLibrary>
+    public class SoundLibraryController : GenericController<Models.SoundEffectLibrary,GetSoundFileDto,AddSoundFileDto,UpdateSoundFileDto>
     {
-        private readonly ISoundLibraryRepository _library;
-        public SoundLibraryController(ISoundLibraryRepository repository) : base(repository)
+        private readonly ISoundFileService _service;
+        public SoundLibraryController(ISoundFileService service) : base((IBusinessService<SoundEffectLibrary, GetSoundFileDto, AddSoundFileDto, UpdateSoundFileDto>)service)
         {
-            _library = repository;
+            _service = service;
         }
     }
 }

@@ -14,8 +14,12 @@ namespace SoundBoard.Controllers
         : GenericController<Models.Music, GetMusicFileDto, AddMusicFileDto, UpdateMusicFileDto>
     {
 
-        private readonly IMusicFileService _musicFileService;
-        public MusicFileController( IMusicFileService musicFileService)
-            : base(repository) { }
+        private readonly IMusicService _musicFileService;
+        public MusicFileController(IMusicService musicFileService)
+            : base(musicFileService)
+        {
+            _musicFileService = musicFileService;
+        }
+       
     }
 }

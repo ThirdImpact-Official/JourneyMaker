@@ -1,4 +1,6 @@
+using Microsoft.Extensions.DependencyInjection;
 using SoundBoard.Extension_Methodes;
+using StackExchange.Redis;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -6,8 +8,14 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 ConfigurationManager configuration = builder.Configuration;
+//Dependency injection coming from extension method 
+
 builder.Services.AddDatabase(configuration);
 builder.Services.AddRepository();
+builder.Services.AddServices();
+builder.Services.AddCacheKeyDb(configuration);
+builder.Services.AddAutoMapper(sdf => { }, typeof(AutoMapperProfile));
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -32,7 +32,7 @@ namespace SoundBoard.Extension_Methodes
             services.AddScoped<IMusicCycleItemRepository, MusicCycleItemRepository>();
             services.AddScoped<IMusicCycleTransitionRepository, MusicCycleTransitionRepository>();
             //Music
-            services.AddScoped<IMusicRepository, IMusicRepository>();
+            services.AddScoped<IMusicRepository, MusicRepository>();
             services.AddScoped<IMusicLibraryRepository, MusicLibraryRepository>();
             //Playlist
             services.AddScoped<IPlaylistRepository, PlaylistRepository>();
@@ -60,10 +60,12 @@ namespace SoundBoard.Extension_Methodes
             services.AddScoped<ISoundFileService, SoundFileService>();
             services.AddScoped<IPlaylistService, PlaylistService>();
             services.AddScoped<IMusicCycleService, MusicCycleService>();
+            services.AddScoped<IMusicService, MusicService>();
             services.AddScoped<IUserTagService, UserTagService>();
             services.AddScoped<IMusicTagService, MusicTagService>();
             return services;
         }
+
         #endregion
     }
 }

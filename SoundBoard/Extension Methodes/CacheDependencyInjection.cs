@@ -7,10 +7,18 @@ namespace SoundBoard.Extension_Methodes
 {
     public static class CacheDependencyInjection
     {
-        public static IServiceCollection AddCacheKeyDb(this IServiceCollection service,IConfiguration configuration)
+        /// <summary>
+        /// add cache to the dependency injection
+        /// </summary>
+        /// <param name="service"></param>
+        /// <param name="configuration"></param>
+        /// <returns></returns>
+        public static IServiceCollection AddCacheKeyDb(this IServiceCollection service, IConfiguration configuration)
         {
-            service.AddStackExchangeRedisCache(opt => {
-                opt.Configuration= configuration.GetConnectionString("keydb");
+
+            service.AddStackExchangeRedisCache(opt =>
+            {
+                opt.Configuration = configuration.GetConnectionString("keydb");
             });
 
             return service;

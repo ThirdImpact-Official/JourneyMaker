@@ -10,10 +10,10 @@ namespace SoundBoard.Controllers
     [ApiController]
     public class SoundFileController : GenericController<Models.SoundEffect,GetSoundFileDto,AddSoundFileDto,UpdateSoundFileDto>
     {
-        
-        public SoundFileController() : base()
+        private readonly ISoundFileService _soundFileRepository;
+        public SoundFileController(ISoundFileService service) : base(service)
         {
-            _soundFileRepository = repository;
+            _soundFileRepository = service;
         }
 
         

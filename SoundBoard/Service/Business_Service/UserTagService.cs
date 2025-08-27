@@ -30,7 +30,7 @@ namespace SoundBoard.Service.Business_Service
         /// </summary>
         /// <param name="unitOfWork"></param>
         /// <param name="mapper"></param>
-        public TagService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
+        public UserTagService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
         {
             this.unitOfWork = unitOfWork;
             this.mapper = mapper;
