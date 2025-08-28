@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\quentin\\JourneyMaker\\SoundBoard\\SoundBoard.csproj": {}
+    "C:\\Users\\quentin\\JourneyMaker\\SoundBoard\\SoundBoard.csproj": {}
   },
   "projects": {
-    "c:\\Users\\quentin\\JourneyMaker\\SoundBoard\\SoundBoard.csproj": {
+    "C:\\Users\\quentin\\JourneyMaker\\SoundBoard\\SoundBoard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\quentin\\JourneyMaker\\SoundBoard\\SoundBoard.csproj",
+        "projectUniqueName": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard\\SoundBoard.csproj",
         "projectName": "SoundBoard",
-        "projectPath": "c:\\Users\\quentin\\JourneyMaker\\SoundBoard\\SoundBoard.csproj",
+        "projectPath": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard\\SoundBoard.csproj",
         "packagesPath": "C:\\Users\\quentin\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\quentin\\JourneyMaker\\SoundBoard\\obj\\",
+        "outputPath": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -53,6 +53,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.19, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",

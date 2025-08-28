@@ -2,25 +2,118 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using SoundBoard.Dto.Auth;
 using SoundBoard.Models.Datatype;
 
 namespace SoundBoard.Service.Business_Service
 {
     public class AuthService : IAuthService
     {
-        public Task<AuthResponse> Login()
+        private readonly UnitOfWork unitOfWork;
+        private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
+        private readonly TokenService _tokenService;
+        /// <summary>
+        /// Constructor 
+        /// </summary>
+        /// <param name="unitOfWork"></param>
+        /// <param name="userManager"></param>
+        public AuthService(UnitOfWork unitOfWork, UserManager<User> userManager, SignInManager<User> signInManager, TokenService tokenService)
         {
-            throw new NotImplementedException();
+            this.unitOfWork = unitOfWork;
+            this._userManager = userManager;
+            this._signInManager = signInManager;
+            this._tokenService = tokenService;
         }
 
-        public Task<AuthResponse> Logout()
+        /// <summary>
+        /// permet a un utilisateur de s'inscrire au seinde l'application
+        /// </summary>
+        /// <returns></returns>
+        public async Task<ServiceResponse<AuthResponse>> SignIn(SignInRequestDto signInRequestDto)
         {
-            throw new NotImplementedException();
-        }
+            AuthResponse authResponse = new AuthResponse();
+            try
+            {
+                //verification de proprietes de l'utilisateur
+                User? ExistUser = await _userManager.FindByEmailAsync(signInRequestDto.Email);
 
-        public Task<AuthResponse> SignIn()
+                if (ExistUser != null)
+                {
+                    return BussinessManager.Failure<AuthResponse>(Errortype.Bad, "L'utilisateur existe deja");
+                }
+                User userEntity = new User()
+                {
+
+                    UserName = signInRequestDto.UserName,
+                    LastName = signInRequestDto.LastName,
+                    FirstName = signInRequestDto.FirstName,
+                    Email = signInRequestDto.Email,
+                    PasswordHash = signInRequestDto.Password,
+
+                };
+
+                await _userManager.CreateAsync(userEntity, signInRequestDto.Password);
+                //enregistrement de l'utilisateur
+
+            }
+            catch (System.Exception ex)
+            {
+                return BussinessManager.Failure<AuthResponse>(Errortype.Bad, ex.Message);
+            }
+        }
+        /// <summary>
+        /// permet a un utilisateur de se connecter au seinde l'application
+        /// </summary>
+        /// <returns></returns>
+        public async Task<ServiceResponse<AuthResponse>> Login(LoginRequestDto loginRequestDto)
         {
-            throw new NotImplementedException();
+            AuthResponse authResponse = new AuthResponse();
+            try
+            {
+                //verificationde l'existence de l'utilisateur
+                User user = await _userManager.FindByEmailAsync(loginRequestDto.Email)
+                    ?? throw new Exception("L'utilisateur n'existe pas");
+
+                // verifier si l'utilisateur peut se connecter
+                bool canSignUp = await _signInManager.CanSignInAsync(user);
+
+                if (!canSignUp)
+                {
+                    return BussinessManager.Failure<AuthResponse>(Errortype.Bad, "L'utilisateur ne peut pas se connecter");
+                }
+
+                //authentification
+                await _signInManager.SignInAsync(user, true, loginRequestDto.Password);
+
+                //génération du jwt token 
+
+                authResponse.Message = "Connexion reussie";
+                authResponse.Refresh = _tokenService.GenerateRefreshToken();
+                authResponse.Success = true;
+                
+
+            }
+            catch (System.Exception ex)
+            {
+                return BussinessManager.Failure<AuthResponse>(Errortype.Bad, ex.Message);
+            }
+        }
+        /// <summary>
+        /// permet a un utilisateur de se deconnecter au seinde l'application
+        /// </summary>
+        /// <returns></returns>
+        public async Task<ServiceResponse<AuthResponse>> Logout()
+        {
+            try
+            {
+
+            }
+            catch (System.Exception ex)
+            { 
+                return BussinessManager.Failure<AuthResponse>(Errortype.Bad,ex.Message);
+            }
         }
     }
 }

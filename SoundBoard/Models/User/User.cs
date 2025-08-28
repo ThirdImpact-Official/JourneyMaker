@@ -11,6 +11,8 @@ namespace SoundBoard.Models
 {
     public class User : IdentityUser
     {
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
         public ICollection<UserTag>? UserTags { get; set; }
         public ICollection<MusicLibrairies>? MusicLibrairies { get; set; }
         public ICollection<SoundEffectLibrary>? SoundEffectLibraries { get; set; }
