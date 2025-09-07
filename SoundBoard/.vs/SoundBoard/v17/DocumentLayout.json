@@ -3,86 +3,274 @@
   "WorkspaceRootPath": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{73DE19E3-7473-4C31-B980-4F6E58DBAE69}|SoundBoard.csproj|c:\\users\\quentin\\journeymaker\\soundboard\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73DE19E3-7473-4C31-B980-4F6E58DBAE69}|SoundBoard.csproj|solutionrelative:repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{72E701B5-88F5-4368-97EA-7C9A7D6B9387}|..\\SoundBoard.UI\\SoundBoard.UI.csproj|c:\\users\\quentin\\journeymaker\\soundboard.ui\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73DE19E3-7473-4C31-B980-4F6E58DBAE69}|SoundBoard.csproj|c:\\users\\quentin\\journeymaker\\soundboard\\repository\\interface\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73DE19E3-7473-4C31-B980-4F6E58DBAE69}|SoundBoard.csproj|solutionrelative:repository\\interface\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{72E701B5-88F5-4368-97EA-7C9A7D6B9387}|..\\SoundBoard.UI\\SoundBoard.UI.csproj|c:\\users\\quentin\\journeymaker\\soundboard.ui\\component\\musiclibrary.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73DE19E3-7473-4C31-B980-4F6E58DBAE69}|SoundBoard.csproj|c:\\users\\quentin\\journeymaker\\soundboard\\service\\business service\\businessservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73DE19E3-7473-4C31-B980-4F6E58DBAE69}|SoundBoard.csproj|solutionrelative:service\\business service\\businessservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{72E701B5-88F5-4368-97EA-7C9A7D6B9387}|..\\SoundBoard.UI\\SoundBoard.UI.csproj|c:\\users\\quentin\\journeymaker\\soundboard.ui\\component\\musiclibrary.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73DE19E3-7473-4C31-B980-4F6E58DBAE69}|SoundBoard.csproj|c:\\users\\quentin\\journeymaker\\soundboard\\models\\datatype\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73DE19E3-7473-4C31-B980-4F6E58DBAE69}|SoundBoard.csproj|solutionrelative:models\\datatype\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{72E701B5-88F5-4368-97EA-7C9A7D6B9387}|..\\SoundBoard.UI\\SoundBoard.UI.csproj|c:\\users\\quentin\\journeymaker\\soundboard.ui\\component\\sounditemui.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72E701B5-88F5-4368-97EA-7C9A7D6B9387}|..\\SoundBoard.UI\\SoundBoard.UI.csproj|c:\\users\\quentin\\journeymaker\\soundboard.ui\\component\\sounditemui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72E701B5-88F5-4368-97EA-7C9A7D6B9387}|..\\SoundBoard.UI\\SoundBoard.UI.csproj|c:\\users\\quentin\\journeymaker\\soundboard.ui\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72E701B5-88F5-4368-97EA-7C9A7D6B9387}|..\\SoundBoard.UI\\SoundBoard.UI.csproj|c:\\users\\quentin\\journeymaker\\soundboard.ui\\models\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72E701B5-88F5-4368-97EA-7C9A7D6B9387}|..\\SoundBoard.UI\\SoundBoard.UI.csproj|c:\\users\\quentin\\journeymaker\\soundboard.ui\\models\\sounditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72E701B5-88F5-4368-97EA-7C9A7D6B9387}|..\\SoundBoard.UI\\SoundBoard.UI.csproj|c:\\users\\quentin\\journeymaker\\soundboard.ui\\component\\soundlibrary.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72E701B5-88F5-4368-97EA-7C9A7D6B9387}|..\\SoundBoard.UI\\SoundBoard.UI.csproj|c:\\users\\quentin\\journeymaker\\soundboard.ui\\soundboard.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72E701B5-88F5-4368-97EA-7C9A7D6B9387}|..\\SoundBoard.UI\\SoundBoard.UI.csproj|c:\\users\\quentin\\journeymaker\\soundboard.ui\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\quentin\\AppData\\Local\\Temp\\.vsdbgsrc\\711e71a80917f17a4ea316178abe374ed8088c0a\\Component_SoundItem.xaml.sg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\quentin\\AppData\\Local\\Temp\\.vsdbgsrc\\a3182d17dadf913165ac3ab1a4e63abb947a49e1\\MainPage.xaml.sg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\quentin\\AppData\\Local\\Temp\\.vsdbgsrc\\182dd1509c680ebe776a55f29040741a1ad6ea55\\MainPage.xaml.sg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 256,
+      "VerticalTabListWidth": 100,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 16,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard\\Repository\\Repository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repository.cs",
-              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard\\Repository\\Repository.cs",
-              "RelativeToolTip": "Repository\\Repository.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAkwIkAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T20:36:54.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard\\Repository\\Interface\\IRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Interface\\IRepository.cs",
-              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard\\Repository\\Interface\\IRepository.cs",
-              "RelativeToolTip": "Repository\\Interface\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T20:35:55.84Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ServiceResponse.cs",
-              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard\\Models\\Datatype\\ServiceResponse.cs",
-              "RelativeDocumentMoniker": "Models\\Datatype\\ServiceResponse.cs",
-              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard\\Models\\Datatype\\ServiceResponse.cs",
-              "RelativeToolTip": "Models\\Datatype\\ServiceResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAXAAAAAAAAAA==",
+              "Title": "SoundItemUI.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\Component\\SoundItemUI.xaml.cs",
+              "RelativeDocumentMoniker": "..\\SoundBoard.UI\\Component\\SoundItemUI.xaml.cs",
+              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\Component\\SoundItemUI.xaml.cs",
+              "RelativeToolTip": "..\\SoundBoard.UI\\Component\\SoundItemUI.xaml.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAcwCUBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T20:32:20.337Z",
+              "WhenOpened": "2025-09-07T13:33:32.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SoundItemUI.xaml",
+              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\Component\\SoundItemUI.xaml",
+              "RelativeDocumentMoniker": "..\\SoundBoard.UI\\Component\\SoundItemUI.xaml",
+              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\Component\\SoundItemUI.xaml",
+              "RelativeToolTip": "..\\SoundBoard.UI\\Component\\SoundItemUI.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-07T13:33:26.032Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BusinessService.cs",
-              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard\\Service\\Business Service\\BusinessService.cs",
-              "RelativeDocumentMoniker": "Service\\Business Service\\BusinessService.cs",
-              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard\\Service\\Business Service\\BusinessService.cs",
-              "RelativeToolTip": "Service\\Business Service\\BusinessService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAgwA8AAAAmAAAAAAAAAA==",
+              "Title": "MusicLibrary.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\Component\\MusicLibrary.xaml.cs",
+              "RelativeDocumentMoniker": "..\\SoundBoard.UI\\Component\\MusicLibrary.xaml.cs",
+              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\Component\\MusicLibrary.xaml.cs",
+              "RelativeToolTip": "..\\SoundBoard.UI\\Component\\MusicLibrary.xaml.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAIwJ0AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T20:30:07.795Z",
+              "WhenOpened": "2025-09-07T12:58:58.442Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MusicLibrary.xaml",
+              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\Component\\MusicLibrary.xaml",
+              "RelativeDocumentMoniker": "..\\SoundBoard.UI\\Component\\MusicLibrary.xaml",
+              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\Component\\MusicLibrary.xaml",
+              "RelativeToolTip": "..\\SoundBoard.UI\\Component\\MusicLibrary.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-07T12:58:40.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SoundItem.cs",
+              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\Models\\SoundItem.cs",
+              "RelativeDocumentMoniker": "..\\SoundBoard.UI\\Models\\SoundItem.cs",
+              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\Models\\SoundItem.cs",
+              "RelativeToolTip": "..\\SoundBoard.UI\\Models\\SoundItem.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwB0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T12:38:59.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainPage.xaml.sg.cs",
+              "DocumentMoniker": "C:\\Users\\quentin\\AppData\\Local\\Temp\\.vsdbgsrc\\a3182d17dadf913165ac3ab1a4e63abb947a49e1\\MainPage.xaml.sg.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\a3182d17dadf913165ac3ab1a4e63abb947a49e1\\MainPage.xaml.sg.cs",
+              "ToolTip": "C:\\Users\\quentin\\AppData\\Local\\Temp\\.vsdbgsrc\\a3182d17dadf913165ac3ab1a4e63abb947a49e1\\MainPage.xaml.sg.cs [Lecture seule]",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\a3182d17dadf913165ac3ab1a4e63abb947a49e1\\MainPage.xaml.sg.cs [Lecture seule]",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwBYAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T12:37:10.709Z",
+              "EditorCaption": " [Lecture seule]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Component_SoundItem.xaml.sg.cs",
+              "DocumentMoniker": "C:\\Users\\quentin\\AppData\\Local\\Temp\\.vsdbgsrc\\711e71a80917f17a4ea316178abe374ed8088c0a\\Component_SoundItem.xaml.sg.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\711e71a80917f17a4ea316178abe374ed8088c0a\\Component_SoundItem.xaml.sg.cs",
+              "ToolTip": "C:\\Users\\quentin\\AppData\\Local\\Temp\\.vsdbgsrc\\711e71a80917f17a4ea316178abe374ed8088c0a\\Component_SoundItem.xaml.sg.cs [Lecture seule]",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\711e71a80917f17a4ea316178abe374ed8088c0a\\Component_SoundItem.xaml.sg.cs [Lecture seule]",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwBYAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T12:36:35.548Z",
+              "EditorCaption": " [Lecture seule]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SoundLibrary.xaml",
+              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\Component\\SoundLibrary.xaml",
+              "RelativeDocumentMoniker": "..\\SoundBoard.UI\\Component\\SoundLibrary.xaml",
+              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\Component\\SoundLibrary.xaml",
+              "RelativeToolTip": "..\\SoundBoard.UI\\Component\\SoundLibrary.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-07T12:04:19.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ServiceResponse.cs",
+              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\Models\\ServiceResponse.cs",
+              "RelativeDocumentMoniker": "..\\SoundBoard.UI\\Models\\ServiceResponse.cs",
+              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\Models\\ServiceResponse.cs",
+              "RelativeToolTip": "..\\SoundBoard.UI\\Models\\ServiceResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T11:47:27.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GlobalUsing.cs",
+              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\GlobalUsing.cs",
+              "RelativeDocumentMoniker": "..\\SoundBoard.UI\\GlobalUsing.cs",
+              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\GlobalUsing.cs",
+              "RelativeToolTip": "..\\SoundBoard.UI\\GlobalUsing.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T11:43:37.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SoundBoard.UI",
+              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\SoundBoard.UI.csproj",
+              "RelativeDocumentMoniker": "..\\SoundBoard.UI\\SoundBoard.UI.csproj",
+              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\SoundBoard.UI.csproj",
+              "RelativeToolTip": "..\\SoundBoard.UI\\SoundBoard.UI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-07T11:34:50.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAP8UAAAAAAAAAAAuwBEVAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-09-07T11:26:56.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "..\\SoundBoard.UI\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\MainPage.xaml.cs",
+              "RelativeToolTip": "..\\SoundBoard.UI\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T11:10:33.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "App.g.i.cs",
+              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeDocumentMoniker": "..\\SoundBoard.UI\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeToolTip": "..\\SoundBoard.UI\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAmwEQAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T11:06:45.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MainPage.xaml.sg.cs",
+              "DocumentMoniker": "C:\\Users\\quentin\\AppData\\Local\\Temp\\.vsdbgsrc\\182dd1509c680ebe776a55f29040741a1ad6ea55\\MainPage.xaml.sg.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\182dd1509c680ebe776a55f29040741a1ad6ea55\\MainPage.xaml.sg.cs",
+              "ToolTip": "C:\\Users\\quentin\\AppData\\Local\\Temp\\.vsdbgsrc\\182dd1509c680ebe776a55f29040741a1ad6ea55\\MainPage.xaml.sg.cs [Lecture seule]",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\182dd1509c680ebe776a55f29040741a1ad6ea55\\MainPage.xaml.sg.cs [Lecture seule]",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAmwBoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T11:06:23.409Z",
+              "EditorCaption": " [Lecture seule]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\MainPage.xaml",
+              "RelativeDocumentMoniker": "..\\SoundBoard.UI\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\quentin\\JourneyMaker\\SoundBoard.UI\\MainPage.xaml",
+              "RelativeToolTip": "..\\SoundBoard.UI\\MainPage.xaml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-07T11:02:49.368Z",
+              "EditorCaption": ""
             }
           ]
         },

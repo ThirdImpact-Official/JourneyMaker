@@ -57,6 +57,7 @@ namespace SoundBoard.Service.Business_Service
                 await _userManager.CreateAsync(userEntity, signInRequestDto.Password);
                 //enregistrement de l'utilisateur
 
+                return BussinessManager.Success(authResponse);
             }
             catch (System.Exception ex)
             {
@@ -90,9 +91,11 @@ namespace SoundBoard.Service.Business_Service
                 //génération du jwt token 
 
                 authResponse.Message = "Connexion reussie";
-                authResponse.Refresh = _tokenService.GenerateRefreshToken();
+                authResponse.Refresh = _tokenService.GenerateRefreshToken().Result;
                 authResponse.Success = true;
                 
+
+                return BussinessManager.Success(authResponse);
 
             }
             catch (System.Exception ex)
