@@ -24,6 +24,7 @@
     <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="9.0.8" />
     <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="9.0.6" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="UraniumUI.Dialogs.CommunityToolkit" Version="2.12.1" />
   </ItemGroup>
 
   <ItemGroup>

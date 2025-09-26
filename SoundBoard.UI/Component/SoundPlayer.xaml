@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+             x:Class="SoundBoard.UI.Component.SoundPlayer">
+    
+    <!-- Footer Sound Player -->
+        <Border BackgroundColor="{AppThemeBinding Light=#f8f9fa, Dark=#2d2d30}"
+            StrokeThickness="1"
+            Stroke="{AppThemeBinding Light=#e0e0e0, Dark=#404040}"
+            StrokeShape="RoundRectangle 12,12,0,0"
+            Padding="15,10">
+
+            <Grid RowDefinitions="Auto,Auto" 
+              ColumnDefinitions="Auto,*,Auto,Auto" 
+              ColumnSpacing="15"
+              RowSpacing="8">
+
+                <!-- Album Art / Sound Icon -->
+                <Frame Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
+                   WidthRequest="50"
+                   HeightRequest="50"
+                   CornerRadius="8"
+                   Padding="0"
+                   HasShadow="False"
+                >
+                    <Image>
+                    <Image.Source>
+                        <FontImageSource FontFamily="FASolid" Glyph="{x:Static fa:Solid.Music}" />
+                    </Image.Source>
+                </Image>
+                </Frame>
+
+                <!-- Sound Info -->
+                <VerticalStackLayout Grid.Row="0" Grid.Column="1" 
+                                Spacing="2"
+                                VerticalOptions="Center">
+                    <Label Text="{Binding SoundTitle, FallbackValue='Current Sound'}"
+                       FontSize="14"
+                       FontAttributes="Bold"
+                       TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                       LineBreakMode="TailTruncation"
+                       MaxLines="1" />
+                    <Label Text="{Binding SoundCategory, FallbackValue='Category'}"
+                       FontSize="11"
+                       TextColor="{AppThemeBinding Light=#666, Dark=#aaa}"
+                       LineBreakMode="TailTruncation"
+                       MaxLines="1" />
+                </VerticalStackLayout>
+
+                <!-- Progress Bar -->
+                <ProgressBar Grid.Row="1" Grid.Column="1"
+                        Progress="{Binding PlaybackPosition}"
+                        ProgressColor="{StaticResource Primary}"
+                        BackgroundColor="{AppThemeBinding Light=#e0e0e0, Dark=#555}"
+                        HeightRequest="3"
+                        VerticalOptions="Start" />
+
+                <!-- Play/Pause Button -->
+            <Button
+                Command="{Binding PlayPauseCommand}"
+                IsVisible="{Binding IsPlaying, Converter={StaticResource InverseBoolConverter}}">
+                <Button.ImageSource>
+                    <FontImageSource FontFamily="FASolid" Glyph="{x:Static fa:Solid.Play}" />
+                </Button.ImageSource>
+            </Button>
+            <Button 
+                    IsVisible="{Binding IsPlaying}">
+                <Button.ImageSource>
+                    <FontImageSource FontFamily="FASolid" Glyph="{x:Static fa:Solid.Pause}" />
+                </Button.ImageSource>
+            </Button>
+
+
+            <!-- Volume & More Controls -->
+            <HorizontalStackLayout Grid.Row="0" Grid.Column="3" Grid.RowSpan="2"
+                                  Spacing="10"
+                                  VerticalOptions="Center">
+
+                <!-- Volume Slider (Horizontal) -->
+                <HorizontalStackLayout Spacing="5" VerticalOptions="Center">
+                    <Image>
+                        <Image.Source>
+                            <FontImageSource FontFamily="FASolid" Glyph="{x:Static fa:Solid.VolumeHigh}" />
+                        </Image.Source>
+                    </Image>
+                    <Slider Value="{Binding Volume}"
+                           Minimum="0"
+                           Maximum="1"
+                           WidthRequest="80"
+                           HeightRequest="20"
+                           ThumbColor="{StaticResource Primary}"
+                           MinimumTrackColor="{StaticResource Primary}"
+                           MaximumTrackColor="{AppThemeBinding Light=#e0e0e0, Dark=#555}" />
+                    <Label Text="{Binding Volume, StringFormat='{0:P0}'}"
+                           FontSize="10"
+                           WidthRequest="30"
+                           VerticalOptions="Center"
+                           TextColor="{AppThemeBinding Light=#666, Dark=#aaa}" />
+                </HorizontalStackLayout>
+
+                <!-- Stop Button -->
+                <Button 
+                       Command="{Binding StopCommand}"
+                       BackgroundColor="Transparent"
+                       TextColor="{AppThemeBinding Light=#666, Dark=#aaa}"
+                       FontSize="16"
+                       WidthRequest="35"
+                       HeightRequest="35"
+                       CornerRadius="17"
+                       Padding="0" >
+
+                    <Button.ImageSource>
+                        <FontImageSource FontFamily="FASolid" Glyph="{x:Static fa:Solid.Stop}" />
+                    </Button.ImageSource>
+                </Button>
+            </HorizontalStackLayout>
+        </Grid>
+        </Border>
+    <ContentView.Resources>
+        <ResourceDictionary xmlns:converters="clr-namespace:SoundBoard.UI.Converters">
+            <converters:InverseBoolConverter x:Key="InverseBoolConverter"/>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    </ContentView>

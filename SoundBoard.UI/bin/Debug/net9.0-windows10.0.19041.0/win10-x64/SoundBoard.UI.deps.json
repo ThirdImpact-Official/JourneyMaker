@@ -9,8 +9,14 @@
     ".NETCoreApp,Version=v9.0/win10-x64": {
       "SoundBoard.UI/1.0": {
         "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
           "Microsoft.Extensions.Logging.Debug": "9.0.5",
           "Microsoft.Maui.Controls": "9.0.82",
+          "Newtonsoft.Json": "13.0.3",
+          "Plugin.Maui.Audio": "4.0.0",
+          "UraniumUI.Dialogs.CommunityToolkit": "2.12.1",
+          "UraniumUI.Icons.FontAwesome": "2.12.1",
+          "UraniumUI.Material": "2.12.1",
           "Microsoft.Web.WebView2.Core.Projection": "1.0.3179.45",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.57"
         },
@@ -27,6 +33,39 @@
           "WinRT.Runtime.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.0.48161"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/9.1.1": {
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "9.1.1",
+          "Microsoft.Maui.Controls": "9.0.82"
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/9.1.1": {
+        "dependencies": {
+          "Microsoft.Maui.Core": "9.0.82",
+          "Microsoft.Maui.Essentials": "9.0.82",
+          "System.Speech": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "InputKit.Maui/4.4.7": {
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/InputKit.Maui.dll": {
+            "assemblyVersion": "4.4.7.0",
+            "fileVersion": "4.4.7.0"
           }
         }
       },
@@ -481,6 +520,85 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.3.27908"
+          }
+        }
+      },
+      "Plainer.Maui/1.7.1": {
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Plainer.Maui.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Plugin.Maui.Audio/4.0.0": {
+        "dependencies": {
+          "Microsoft.Maui.Controls": "9.0.82"
+        },
+        "runtime": {
+          "lib/net9.0-windows10.0.19041/Plugin.Maui.Audio.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "System.Speech/8.0.0": {
+        "runtime": {
+          "runtimes/win/lib/net8.0/System.Speech.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
+      "UraniumUI/2.12.1": {
+        "dependencies": {
+          "InputKit.Maui": "4.4.7",
+          "Microsoft.Maui.Controls": "9.0.82",
+          "Plainer.Maui": "1.7.1"
+        },
+        "runtime": {
+          "lib/net9.0-windows10.0.19041/UraniumUI.dll": {
+            "assemblyVersion": "2.11.0.0",
+            "fileVersion": "2.11.0.0"
+          }
+        }
+      },
+      "UraniumUI.Dialogs.CommunityToolkit/2.12.1": {
+        "dependencies": {
+          "CommunityToolkit.Maui": "9.1.1",
+          "UraniumUI": "2.12.1"
+        },
+        "runtime": {
+          "lib/net9.0-windows10.0.19041/UraniumUI.Dialogs.CommunityToolkit.dll": {
+            "assemblyVersion": "2.11.0.0",
+            "fileVersion": "2.11.0.0"
+          }
+        }
+      },
+      "UraniumUI.Icons.FontAwesome/2.12.1": {
+        "runtime": {
+          "lib/net9.0-windows10.0.19041/UraniumUI.Icons.FontAwesome.dll": {
+            "assemblyVersion": "2.11.0.0",
+            "fileVersion": "2.11.0.0"
+          }
+        }
+      },
+      "UraniumUI.Material/2.12.1": {
+        "dependencies": {
+          "UraniumUI": "2.12.1"
+        },
+        "runtime": {
+          "lib/net9.0-windows10.0.19041/UraniumUI.Material.dll": {
+            "assemblyVersion": "2.11.0.0",
+            "fileVersion": "2.11.0.0"
+          }
+        }
+      },
       "Microsoft.Web.WebView2.Core.Projection/1.0.3179.45": {
         "runtime": {
           "Microsoft.Web.WebView2.Core.Projection.dll": {
@@ -501,6 +619,27 @@
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
+    },
+    "CommunityToolkit.Maui/9.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vDFIMhs/NRKEaHrrxq3AR3qEnfc0L6nno3/ZEFRUctDdwcYKNfmx8aof1lj8++dX+56c282SLHyuCnN6eH2Mpg==",
+      "path": "communitytoolkit.maui/9.1.1",
+      "hashPath": "communitytoolkit.maui.9.1.1.nupkg.sha512"
+    },
+    "CommunityToolkit.Maui.Core/9.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2O5bgBnwYLKXUMSA4a0hd3ildtr9t5Rw109y7Lz0udnX4C9JrW8Xi1mLDuUcNmK+U37gulhJGLb2tCMc+cbo3w==",
+      "path": "communitytoolkit.maui.core/9.1.1",
+      "hashPath": "communitytoolkit.maui.core.9.1.1.nupkg.sha512"
+    },
+    "InputKit.Maui/4.4.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nrHIYEVnjJoRKBDEO9Wji8i2bNK3VaZOkWRy8srLXgvASX74SutOC7RuN95MUJqp4uTCCw1E9pNw26gMSKXqZA==",
+      "path": "inputkit.maui/4.4.7",
+      "hashPath": "inputkit.maui.4.4.7.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/9.0.5": {
       "type": "package",
@@ -662,6 +801,62 @@
       "sha512": "sha512-K5QqtDmMEa6Jy2PLAXKj9XWZoldG21IX5+TPe2XjxtNL/xLlciaqlOe22mjyET26Ry0gEVw0xOaQcpwtLCbMog==",
       "path": "microsoft.windowsappsdk/1.7.250513003",
       "hashPath": "microsoft.windowsappsdk.1.7.250513003.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "path": "newtonsoft.json/13.0.3",
+      "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
+    },
+    "Plainer.Maui/1.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rou+ErJ0l2GkJyMYRKtPiPxEtOGngj7Lv7H5NVACG9baPy3D3tGLO5ma16Usem5/vddu8Ov6bZaXntPMQANXQw==",
+      "path": "plainer.maui/1.7.1",
+      "hashPath": "plainer.maui.1.7.1.nupkg.sha512"
+    },
+    "Plugin.Maui.Audio/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-axet2WKKft9UAGTtCbflkMeWNmZHQJixIJxIbRzhRqoFifr5nFcZV0PWV/E0NPBUjkydBWVlRqXA1hQWMeY/0A==",
+      "path": "plugin.maui.audio/4.0.0",
+      "hashPath": "plugin.maui.audio.4.0.0.nupkg.sha512"
+    },
+    "System.Speech/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CNuiA6vb95Oe5PRjClZEBiaju31vwB8OIeCgeSBXyZL6+MS4RVVB2X/C11z0xCkooHE3Vy91nM2z76emIzR+sg==",
+      "path": "system.speech/8.0.0",
+      "hashPath": "system.speech.8.0.0.nupkg.sha512"
+    },
+    "UraniumUI/2.12.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9ybnIG1EGONKM+fUeJ7/uL1kxceJ65ElHPb6EesVyCx79KU35SktshsjRhqsKeWeADrkg9gTUzcc2POPbsQ1hQ==",
+      "path": "uraniumui/2.12.1",
+      "hashPath": "uraniumui.2.12.1.nupkg.sha512"
+    },
+    "UraniumUI.Dialogs.CommunityToolkit/2.12.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Tsq/m3Ex5rw8XDPQpjGrOlspvHgOtDmg9TukGTYEPj20Bt8cjiDA71KU98csdWD5jCKW63Q3UkR1eZwuY1ni2w==",
+      "path": "uraniumui.dialogs.communitytoolkit/2.12.1",
+      "hashPath": "uraniumui.dialogs.communitytoolkit.2.12.1.nupkg.sha512"
+    },
+    "UraniumUI.Icons.FontAwesome/2.12.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-THLawVaiccsgwewokMnkOUdOVIvDZY3N+iOOgtGp1ou4pdI/DInAnjTzicylUpKN8u5jDQ5Wa+qXONkvg+9cqQ==",
+      "path": "uraniumui.icons.fontawesome/2.12.1",
+      "hashPath": "uraniumui.icons.fontawesome.2.12.1.nupkg.sha512"
+    },
+    "UraniumUI.Material/2.12.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nwar0WL3skp2mI+YkEfaLFqDicNoId2OOVR1iH1knEzbdBxbCHGmhH8eZT9eDws6N8xc89sNr1Ash9GlBxubfg==",
+      "path": "uraniumui.material/2.12.1",
+      "hashPath": "uraniumui.material.2.12.1.nupkg.sha512"
     },
     "Microsoft.Web.WebView2.Core.Projection/1.0.3179.45": {
       "type": "reference",

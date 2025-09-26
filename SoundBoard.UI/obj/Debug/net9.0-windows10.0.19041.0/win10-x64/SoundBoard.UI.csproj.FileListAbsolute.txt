@@ -514,3 +514,14 @@ C:\Users\quentin\JourneyMaker\SoundBoard.UI\obj\Debug\net9.0-windows10.0.19041.0
 C:\Users\quentin\JourneyMaker\SoundBoard.UI\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Users\quentin\JourneyMaker\SoundBoard.UI\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\quentin\JourneyMaker\SoundBoard.UI\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\quentin\JourneyMaker\SoundBoard.UI\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Plugin.Maui.Audio.dll
+C:\Users\quentin\JourneyMaker\SoundBoard.UI\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\InputKit.Maui.dll
+C:\Users\quentin\JourneyMaker\SoundBoard.UI\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Plainer.Maui.dll
+C:\Users\quentin\JourneyMaker\SoundBoard.UI\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\UraniumUI.dll
+C:\Users\quentin\JourneyMaker\SoundBoard.UI\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\UraniumUI.Material.dll
+C:\Users\quentin\JourneyMaker\SoundBoard.UI\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll
+C:\Users\quentin\JourneyMaker\SoundBoard.UI\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
+C:\Users\quentin\JourneyMaker\SoundBoard.UI\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
+C:\Users\quentin\JourneyMaker\SoundBoard.UI\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.Speech.dll
+C:\Users\quentin\JourneyMaker\SoundBoard.UI\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\UraniumUI.Dialogs.CommunityToolkit.dll
+C:\Users\quentin\JourneyMaker\SoundBoard.UI\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\UraniumUI.Icons.FontAwesome.dll

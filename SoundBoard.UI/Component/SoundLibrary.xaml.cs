@@ -46,8 +46,6 @@ public partial class SoundLibrary : ContentView
 		foreach(var item in _sounds) 
 		{
 			SoundItemUI itemUI = new SoundItemUI(item);
-			itemUI.OnPlayRequested += OnSoundPlayRequested;
-			itemUI.OnRemoveRequested += OnSoundRemoveRequested;
 
 			_soundItemUIs.Add(itemUI);
 			SoundsContainer.Children.Add(itemUI);
@@ -63,7 +61,7 @@ public partial class SoundLibrary : ContentView
         {
             if (ui.SoundItem != sound)
             {
-                ui.SetPlayingState(false);
+               
             }
         }
 
@@ -93,14 +91,12 @@ public partial class SoundLibrary : ContentView
         var playingUI = _soundItemUIs.FirstOrDefault(ui => ui.SoundItem == sound);
         if (playingUI != null)
         {
-            playingUI.HighlightItem(true);
-            playingUI.SetPlayingState(true);
+          
 
             // Simuler la fin de lecture après 3 secondes
             Device.StartTimer(TimeSpan.FromSeconds(3), () =>
             {
-                playingUI.HighlightItem(false);
-                playingUI.SetPlayingState(false);
+               
                 return false; // Stop timer
             });
         }

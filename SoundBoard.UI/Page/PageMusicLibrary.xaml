@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SoundBoard.UI.Page.PageMusicLibrary"
+             xmlns:Component="clr-namespace:SoundBoard.UI.Component"
+             ControlTemplate="{StaticResource MainLayout}"
+             Title="PageMusicLibrary">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto"/>
+
+            <Component:MusicLibrary Grid.Row="0" Grid.Column="0"/>
+            <BoxView Color="Crimson" Grid.Row="1" Grid.Column="1">
+                
+                
+            </BoxView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

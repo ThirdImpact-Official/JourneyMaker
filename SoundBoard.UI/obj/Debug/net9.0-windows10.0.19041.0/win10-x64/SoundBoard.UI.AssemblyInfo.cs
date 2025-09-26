@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SoundBoard.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+0632494d9aef8924989b9fd1a436e5ede7a471da")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+d177821f345db149aa2609b65a290a258e5d6ef3")]
 [assembly: System.Reflection.AssemblyProductAttribute("SoundBoard.UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SoundBoard.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

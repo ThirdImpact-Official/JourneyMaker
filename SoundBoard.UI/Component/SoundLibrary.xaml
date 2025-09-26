@@ -3,7 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:component="clr-namespace:SoundBoard.UI.Component"
              x:Class="SoundBoard.UI.Component.SoundLibrary">
-    <StackLayout x:Name="SoundsContainer" Padding="20" Spacing="10">
+    <StackLayout StyleClass="Elevation1"
+                 x:Name="SoundsContainer" 
+                 Padding="20" 
+                 Spacing="10">
         
     </StackLayout>
 </ContentView>

@@ -34,11 +34,41 @@ build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.AppShell.xam
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
+[C:/Users/quentin/JourneyMaker/SoundBoard.UI/Component/Footer.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.Component.Footer.xaml
+build_metadata.AdditionalFiles.TargetPath = Component\Footer.xaml
+build_metadata.AdditionalFiles.RelativePath = Component\Footer.xaml
+
+[C:/Users/quentin/JourneyMaker/SoundBoard.UI/Component/Header.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.Component.Header.xaml
+build_metadata.AdditionalFiles.TargetPath = Component\Header.xaml
+build_metadata.AdditionalFiles.RelativePath = Component\Header.xaml
+
 [C:/Users/quentin/JourneyMaker/SoundBoard.UI/Component/MusicLibrary.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.Component.MusicLibrary.xaml
 build_metadata.AdditionalFiles.TargetPath = Component\MusicLibrary.xaml
 build_metadata.AdditionalFiles.RelativePath = Component\MusicLibrary.xaml
+
+[C:/Users/quentin/JourneyMaker/SoundBoard.UI/Component/NavigationBar.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.Component.NavigationBar.xaml
+build_metadata.AdditionalFiles.TargetPath = Component\NavigationBar.xaml
+build_metadata.AdditionalFiles.RelativePath = Component\NavigationBar.xaml
+
+[C:/Users/quentin/JourneyMaker/SoundBoard.UI/Component/Playlist.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.Component.Playlist.xaml
+build_metadata.AdditionalFiles.TargetPath = Component\Playlist.xaml
+build_metadata.AdditionalFiles.RelativePath = Component\Playlist.xaml
+
+[C:/Users/quentin/JourneyMaker/SoundBoard.UI/Component/SoundGrid.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.Component.SoundGrid.xaml
+build_metadata.AdditionalFiles.TargetPath = Component\SoundGrid.xaml
+build_metadata.AdditionalFiles.RelativePath = Component\SoundGrid.xaml
 
 [C:/Users/quentin/JourneyMaker/SoundBoard.UI/Component/SoundItemUI.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -52,11 +82,59 @@ build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.Component.So
 build_metadata.AdditionalFiles.TargetPath = Component\SoundLibrary.xaml
 build_metadata.AdditionalFiles.RelativePath = Component\SoundLibrary.xaml
 
+[C:/Users/quentin/JourneyMaker/SoundBoard.UI/Component/SoundPlayer.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.Component.SoundPlayer.xaml
+build_metadata.AdditionalFiles.TargetPath = Component\SoundPlayer.xaml
+build_metadata.AdditionalFiles.RelativePath = Component\SoundPlayer.xaml
+
+[C:/Users/quentin/JourneyMaker/SoundBoard.UI/Component/SoundSheet.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.Component.SoundSheet.xaml
+build_metadata.AdditionalFiles.TargetPath = Component\SoundSheet.xaml
+build_metadata.AdditionalFiles.RelativePath = Component\SoundSheet.xaml
+
+[C:/Users/quentin/JourneyMaker/SoundBoard.UI/Layout/AuthLayout.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.Layout.AuthLayout.xaml
+build_metadata.AdditionalFiles.TargetPath = Layout\AuthLayout.xaml
+build_metadata.AdditionalFiles.RelativePath = Layout\AuthLayout.xaml
+
+[C:/Users/quentin/JourneyMaker/SoundBoard.UI/Layout/MainLayout.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.Layout.MainLayout.xaml
+build_metadata.AdditionalFiles.TargetPath = Layout\MainLayout.xaml
+build_metadata.AdditionalFiles.RelativePath = Layout\MainLayout.xaml
+
 [C:/Users/quentin/JourneyMaker/SoundBoard.UI/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/quentin/JourneyMaker/SoundBoard.UI/Page/PageMusicLibrary.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.Page.PageMusicLibrary.xaml
+build_metadata.AdditionalFiles.TargetPath = Page\PageMusicLibrary.xaml
+build_metadata.AdditionalFiles.RelativePath = Page\PageMusicLibrary.xaml
+
+[C:/Users/quentin/JourneyMaker/SoundBoard.UI/Page/PageSoundLibrary.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.Page.PageSoundLibrary.xaml
+build_metadata.AdditionalFiles.TargetPath = Page\PageSoundLibrary.xaml
+build_metadata.AdditionalFiles.RelativePath = Page\PageSoundLibrary.xaml
+
+[C:/Users/quentin/JourneyMaker/SoundBoard.UI/Page/Playlist.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.Page.Playlist.xaml
+build_metadata.AdditionalFiles.TargetPath = Page\Playlist.xaml
+build_metadata.AdditionalFiles.RelativePath = Page\Playlist.xaml
+
+[C:/Users/quentin/JourneyMaker/SoundBoard.UI/Page/UserSoundBoard.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SoundBoard.UI.Page.UserSoundBoard.xaml
+build_metadata.AdditionalFiles.TargetPath = Page\UserSoundBoard.xaml
+build_metadata.AdditionalFiles.RelativePath = Page\UserSoundBoard.xaml
 
 [C:/Users/quentin/JourneyMaker/SoundBoard.UI/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

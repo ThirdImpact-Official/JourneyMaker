@@ -4,11 +4,28 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:SoundBoard.UI"
+    xmlns:page="clr-namespace:SoundBoard.UI.Page"
     Title="SoundBoard.UI">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    <TabBar>
+        <ShellContent
+             Title="Home"
+             ContentTemplate="{DataTemplate local:MainPage}"
+             Route="MainPage" />
+        <ShellContent
+             Title="SoundBoard"
+             ContentTemplate="{DataTemplate page:UserSoundBoard}"
+             Route="MainPage" />
+        <ShellContent
+                Title="Playlist"
+                ContentTemplate="{DataTemplate page:Playlist}"
+                Route="MainPage" />
+        <ShellContent
+                Title="Music lib"
+                ContentTemplate="{DataTemplate page:PageMusicLibrary}"
+                Route="MainPage" />
+        <ShellContent
+                Title="sound lib"
+                ContentTemplate="{DataTemplate page:PageSoundLibrary}"
+                Route="MainPage" />
+    </TabBar>
 </Shell>

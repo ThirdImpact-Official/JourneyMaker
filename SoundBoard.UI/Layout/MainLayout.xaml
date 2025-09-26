@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Component="clr-namespace:SoundBoard.UI.Component"
+             x:Class="SoundBoard.UI.Layout.MainLayout">
+
+    <ControlTemplate x:Key="MainLayout">
+        <Grid RowDefinitions="Auto,*,Auto">
+
+            <!-- Header -->
+            <Grid Background="LightGray">
+                <Component:Header/>
+            </Grid>
+
+            <!-- Page content -->
+            <ContentPresenter Grid.Row="1" Padding="4" />
+
+            <!-- Footer -->
+            <Grid Grid.Row="2" Background="LightGray">
+                <Component:Footer/>
+            </Grid>
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>
